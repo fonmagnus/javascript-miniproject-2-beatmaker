@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  background: rgb(249, 247, 247);
+}
+
+.page-title {
+  font-family: "Holtwood One SC";
+  font-size: 2rem;
+  color: rgb(74, 72, 72);
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  padding-top: 3rem;
+}
+
+.hihat-track,
+.snare-track,
+.kick-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad,
+.kick-pad.active,
+.snare-pad.active,
+.hihat-pad.active {
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+.drum-title {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+  background: rgb(88, 88, 88);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 30px;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.kick-pad {
+  background: rgb(184, 235, 247);
+}
+
+.snare-pad {
+  background: rgb(240, 188, 227);
+}
+
+.hihat-pad {
+  background: rgb(245, 216, 183);
+}
+
+.kick-pad.active {
+  background: rgb(59, 197, 231);
+}
+
+.snare-pad.active {
+  background: rgb(218, 58, 178);
+}
+
+.hihat-pad.active {
+  background: rgb(241, 158, 64);
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background: rgb(88, 88, 88);
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-top: 3rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.play-active:hover {
+  color: black;
+  background: rgb(107, 211, 107);
+}
+
+.stop-active:hover {
+  color: white;
+  background: rgb(238, 112, 63);
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  width: 10rem;
+  border: none;
+  font-family: "Lato", sans-serif;
+}
+
+.mute.active {
+  background: rgb(199, 195, 195);
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background: rgb(211, 208, 208);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
